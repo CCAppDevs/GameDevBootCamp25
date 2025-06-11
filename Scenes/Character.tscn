@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhqnfgh51l4j8"]
+
+[ext_resource type="Script" uid="uid://cgwbkyr5c8lju" path="res://Scripts/Components/state_machine.gd" id="58_6b312"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebmjs"]
+radius = 5.0
+height = 18.0
+
+[node name="Character" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+position = Vector2(1, -9)
+shape = SubResource("CapsuleShape2D_ebmjs")
+
+[node name="State Machine" type="Node" parent="."]
+script = ExtResource("58_6b312")
